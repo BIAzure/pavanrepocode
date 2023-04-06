@@ -10,6 +10,22 @@
 				"typeProperties": {
 					"waitTimeInSeconds": 2
 				}
+			},
+			{
+				"name": "Storage Procedure",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "ASQL_ABLOB Data Loading",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
 			}
 		],
 		"annotations": []
